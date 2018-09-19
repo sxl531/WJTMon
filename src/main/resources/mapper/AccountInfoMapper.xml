@@ -3,11 +3,24 @@
 <mapper namespace="com.WJTMon.dao.AccountInfoMapper">
   <resultMap id="AccountInfoMap" type="com.WJTMon.entity.AccountInfo">
     <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="CREATION_TIME" jdbcType="" property=""></result>
+    <result column="DELETED" jdbcType="" property=""></result>
+    <result column="LAST_UPDATE_TIME" jdbcType="" property=""></result>
+    <result column="TELEPHONE" jdbcType="" property=""></result>
+    <result column="USERNAME" jdbcType="" property=""></result>
+    <result column="DEPARTMENT_ID" jdbcType="" property=""></result>
+    <result column="DEPARTMENT_CODE" jdbcType="" property=""></result>
+    <result column="DEPARTMENT_NAME" jdbcType="" property=""></result>
+    <result column="SCOPE" jdbcType="" property=""></result>
   </resultMap>
   
   <sql id="Account_Column_List">
-     id
+    ID, CREATION_TIME, DELETED, LAST_UPDATE_TIME, TELEPHONE, USERNAME, DEPARTMENT_ID, DEPARTMENT_CODE, DEPARTMENT_NAME, SCOPE
   </sql>
+
+  <insert id="insert" parameterMap="com.WJTMon.entity.AccountInfo">
+       insert into
+  </insert>
   
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="AccountInfoMap">
     select 
